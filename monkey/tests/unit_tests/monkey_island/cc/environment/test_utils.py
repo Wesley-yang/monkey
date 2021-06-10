@@ -8,7 +8,9 @@ from monkey_island.cc.environment.utils import create_secure_directory, is_windo
 
 @pytest.fixture
 def test_path_nested(tmpdir):
-    path = os.path.join(tmpdir, "test1", "test2", "test3")
+    nested_path = "test1/test2/test3"
+    path = os.path.join(tmpdir, nested_path)
+
     return path
 
 
